@@ -1,8 +1,18 @@
 def intersection(arrays):
     """
-    YOUR CODE HERE
+    Find the intersection between multiple lists of integers. Computer the intersection, return the value.
     """
     # Your code here
+    cache = {}
+
+    for i in arrays:
+        for j in i:
+            if j in cache:
+                cache[j] += 1
+            else:
+                cache[j] = 1
+
+    result = [i[0] for i in cache.items() if i[1] == len(arrays)]
 
     return result
 

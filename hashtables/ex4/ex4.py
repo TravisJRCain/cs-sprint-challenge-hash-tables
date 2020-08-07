@@ -1,8 +1,16 @@
 def has_negatives(a):
     """
-    YOUR CODE HERE
+    Return the positive numbers that have a corresponding negative number.
     """
     # Your code here
+    cache = {}
+    result = []
+
+    for i in a:
+        cache[i] = 1
+
+        if i != 0 and -i in cache:
+            result.append(abs(i))
 
     return result
 
