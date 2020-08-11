@@ -2,6 +2,7 @@ def has_negatives(a):
     """
     Return the positive numbers that have a corresponding negative number.
     """
+    
     # Your code here
     cache = {}
     result = []
